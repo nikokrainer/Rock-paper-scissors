@@ -1,0 +1,21 @@
+/* koristimo ovaj nacin jer ovim putem javascriptom mozemo mjenjat boju varijablje, da koristimo scss nebismo mogli */
+
+:root {
+	--white: hsl(0, 0%, 100%);
+	--black: hsl(0, 0%, 0%);
+
+--scissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+--paperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+--rockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+--lizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+--cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+/* ### Neutral */
+
+--darkText: hsl(229, 25%, 31%);
+--scoreText: hsl(229, 64%, 46%);
+--headerOutline: hsl(217, 16%, 45%);
+
+/* ### Background */
+--radialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+}

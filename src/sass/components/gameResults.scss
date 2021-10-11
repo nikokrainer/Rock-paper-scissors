@@ -1,0 +1,133 @@
+@use "../util/" as *;
+
+.gameResult{
+    width: 100%;
+    height: 400px;
+    /* background: red; */
+
+    &__text{
+        text-align: center;
+
+        h1{
+            margin-bottom: 3rem;
+        }
+        a{
+          padding: 0.6rem 2rem;
+          @include breakpoint(medium){
+            padding: 1.2rem 3rem;
+          }
+          @include breakpoint(large){
+            padding: 1.2rem 11rem;
+          }
+            line-height: 0;
+            color: var(--black);
+            border-radius: 1.1rem;
+            background: var(--white);
+            transition: color 150ms ease-in-out;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}
+
+.paperResult,
+.rockResult,
+.scissorsResult {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+
+  @include breakpoint(medium){
+    width: 19rem;
+    height: 19rem;
+}
+
+  @include breakpoint(large){
+      width: 27rem;
+      height: 27rem;
+  }
+
+  &__background {
+    margin: 0;
+    background-color: var(--white);
+    box-shadow: inset 0rem 0.5rem rgb(148, 148, 148);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+
+    @include breakpoint(medium){
+      width: 15rem;
+   height: 15rem;
+  }
+
+    @include breakpoint(large){
+        width: 20.5rem;
+    height: 20.5rem;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.paperResult {
+    background-image: linear-gradient(
+      to top,
+      hsl(230, 89%, 62%),
+      hsl(230, 89%, 65%)
+    );
+    box-shadow: 0rem 0.5rem 0 0rem hsl(230, 54%, 38%);
+  }
+
+  .scissorsResult {
+    background-image: linear-gradient(
+      to top,
+      hsl(40, 97%, 53%),
+      hsl(39, 85%, 48%)
+    );
+    box-shadow: 0rem 0.5rem 0 0rem hsl(39, 54%, 38%);
+  }
+
+  .rockResult {
+    transform-origin: -8% center;
+
+    background-image: linear-gradient(
+      to top,
+      hsl(349, 71%, 52%),
+      hsl(349, 70%, 56%)
+    );
+    box-shadow: 0rem 0.5rem 0 0rem hsl(349, 54%, 38%);
+  }
+
+  .rockImgTransform{
+    transform: translate(-48%, -41%);
+    @include breakpoint(medium){
+      transform: translate(-46%, -31%) scale(1.4);
+    }
+    @include breakpoint(large){
+      transform: translate(-46%, -31%) scale(1.8);
+    }
+  }
+  .paperImgTransform{
+    transform: translate(-54%, -44%);
+    @include breakpoint(medium){
+      transform: translate(-48%, -45%) scale(1.4);
+    }
+    @include breakpoint(large){
+      transform: translate(-48%, -45%) scale(1.8);
+    }
+  }
+  .scissorsImgTransform{
+    transform: translate(-52%, -43%);
+    @include breakpoint(medium){
+      transform: translate(-42%, -45%) scale(1.4);
+    }
+    @include breakpoint(large){
+      transform: translate(-42%, -45%) scale(1.8);
+    }
+  }
